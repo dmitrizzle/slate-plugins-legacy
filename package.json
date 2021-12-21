@@ -46,6 +46,7 @@
     "slate-soft-break": "*"
   },
   "scripts": {
+    "audit:fix": "npx yarn-audit-fix",
     "bootstrap": "lerna bootstrap && yarn run build",
     "build": "yarn run build:packages",
     "build:examples": "yarn run build:examples:dev && yarn run build:examples:prod",
@@ -63,5 +64,6 @@
     "watch": "npm-run-all --parallel --print-label watch:examples watch:packages start",
     "watch:examples": "watchify --debug --transform babelify ./examples/index.js -o ./examples/build.dev.js -v",
     "watch:packages": "lerna run --parallel watch"
-  }
+  },
+  "version": "1.22.11"
 }
